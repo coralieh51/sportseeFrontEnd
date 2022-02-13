@@ -1,3 +1,15 @@
-header span {
-    color: red;
+header {
+    margin-left: 102px;
+    margin-top: 68px;
+    h1 {
+        font-weight: 500;
+        font-size: 48px;
+        span {
+            font-weight: 400;
+            color: red;
+        }
+    }
+    aside {
+        font-size: 18px;
+    }
 }
