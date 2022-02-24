@@ -1,6 +1,27 @@
-# Getting Started with Create React App
+![CreatedBy](https://img.shields.io/static/v1?label=Created%20by&message=Coralie%20HUBERT&color=blueviolet&style=flat)
+![BuiltWith](https://img.shields.io/static/v1?label=Built%20with&message=React_v17.0.2&color=blue&style=flat&logo=createreactapp)
+![BuiltWith](https://img.shields.io/static/v1?label=Built%20with&message=SASS&color=red&style=flat&logo=sass)
+![Contains](https://img.shields.io/static/v1?label=Contains&message=Recharts&color=blue&style=flat)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app allowes you to follow your performances and skills of your sports programs.
+
+# 1 - Getting Started with Sportsee App
+
+Fork the repository
+Clone it on your computer
+Install with `npm install` command
+
+# 2 - Using with `MOCK` data
+
+Go into the `.src/config.js` file to change `DATA_SRC` constant into `MOCK` string.
+
+# 3 - Using with Sportsee `API` data
+
+Fork the reposiroty : https://github.com/coralieh51/sportseeAPI and follow installation steps into the `README.md`.
+
+Go into the `.src/config.js` file to change `DATA_SRC` constant into `API` string.
+
+# 4 - Get started
 
 ## Available Scripts
 
@@ -8,8 +29,11 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Launch the API from the `./back-end` folder project with the `npm start` command, refer to the README.md of the `sportseeAPI repository`.
+
+Runs the `front-end app` in the development mode.\
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.If port 3000 is already used for the API, allow the use of another port (i.e : 3001) instead.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -39,27 +63,9 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
 ### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To get more information in the use of the app like `routes` or available user Ids, refer to the `README.md` of the API app (Endpoints).
 
 ### Deployment
 

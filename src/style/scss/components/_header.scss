@@ -1,15 +1,23 @@
 header {
-    margin-left: 102px;
-    margin-top: 68px;
-    h1 {
-        font-weight: 500;
-        font-size: 48px;
-        span {
-            font-weight: 400;
-            color: red;
-        }
+  height: 91px;
+  display: flex;
+  background: #000;
+  box-shadow: 0 3px 2px #aaa;
+  img {
+    margin-top: 18px;
+    margin-left: 28px;
+    margin-bottom: 12px;
+  }
+  ul {
+    color: #fff;
+    margin: auto;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 994px;
+    list-style: none;
+    display: flex;
+    li {
+      font-size: 24px;
     }
-    aside {
-        font-size: 18px;
-    }
+  }
 }

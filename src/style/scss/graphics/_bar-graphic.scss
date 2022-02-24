@@ -1,0 +1,20 @@
+#graphics .graphicWrapper.bargraphic {
+  h1 {
+    color: #282D30;
+  }
+  height: 320px;
+    .custom-tooltip {
+      background: #E60000;
+      width: 39px;
+      height: 63px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: 7px;
+      .label {
+          font-size: 7px;
+          color: #fff;
+      }
+  }
+}

@@ -1,0 +1,28 @@
+#graphics {
+  #bottomgraphicscontainer {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 250px;
+  margin-left: 20px;
+  min-width: 700px;
+  max-width: 835px;
+  width: 100%;
+  height: 813px;
+  .graphicWrapper {
+    background-color: $element-background;
+    position: relative;
+  }
+  .graphicTitle {
+    position: absolute;
+    font-size: 15px;
+    width: 50%;
+    padding-top: 5px;
+    height: auto;
+    padding-left: 30px;
+  }
+}

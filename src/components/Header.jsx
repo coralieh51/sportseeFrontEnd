@@ -1,21 +1,15 @@
-import {getUserInfos, getActivity} from "../services/getData";
-import { useState, useEffect } from "react";
+import logo from "../assets/img/logo.svg";
 
 function Header() {
-  const [userData, setUserInfos] = useState(null);
-  useEffect(async () => {
-    const Data = await getUserInfos();
-    setUserInfos(Data);
-  }, []);
-  console.log(userData);
-
-  if (userData === null) { return <div>Loading</div> }
   return (
     <header>
-      <h1>
-        Bonjour <span>{userData.userInfos.firstName}</span>
-      </h1>
-      <aside>Félicitations ! Vous avez explosé vos obectifs hier !</aside>
+      <img src={logo} alt="logo SportSee" />
+      <ul>
+        <li>Accueil</li>
+        <li>Profil</li>
+        <li>Réglage</li>
+        <li>Communauté</li>
+      </ul>
     </header>
   );
 }

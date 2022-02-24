@@ -1,4 +1,11 @@
-@import "./components/variables";
+@import "./variables";
 @import "./base";
+@import "./components/user-greetings";
 @import "./components/header";
-@import "./components/navs/topNav";
+@import "./components/leftNav";
+@import "./components/nutrients";
+@import "./graphics/bar-graphic";
+@import "./graphics/graphics";
+@import "./graphics/line-graphic";
+@import "./graphics/radar-graphic";
+@import "./graphics/radial-graphic";

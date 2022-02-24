@@ -1,0 +1,33 @@
+.leftnav {
+  justify-self: flex-start;
+  width: 117px;
+  min-height: 1024px;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  align-items: center;
+  justify-content: space-around;
+  ul {
+    margin-top: 200px;
+    width: 117px;
+    color: #fff;
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  span {
+    justify-self: center;
+    font-size: 12px;
+    width: 138px;
+    height: 24px;
+    transform: rotate(-90deg);
+    color: #fff;
+  }
+}

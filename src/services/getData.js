@@ -15,7 +15,7 @@ const getActivity = () => {
   if (DATA_SRC === "API") {
     return axios
       .get(URI + PATH_USER + USER_ID + "/activity")
-      .then((res) => console.log(res.data.data));
+      .then((res) =>res.data.data);
   }
   return console.log(USER_ACTIVITY.find(user => user.userId === USER_ID))
 }
@@ -23,7 +23,7 @@ const getActivity = () => {
 const getPerformance = () => {
     if(DATA_SRC === "API") {
         return axios.get(URI + PATH_USER + USER_ID + "/performance")
-        .then((res) => console.log(res.data.data));
+        .then((res) => res.data.data);
     }
     return console.log(USER_PERFORMANCE.find(user => user.userId === USER_ID))
 }
@@ -31,9 +31,16 @@ const getPerformance = () => {
 const getAverageSessions = () => {
     if (DATA_SRC === "API") {
         return(axios.get(URI + PATH_USER + USER_ID + "/average-sessions"))
-        .then (res => console.log(res.data.data))
+        .then (res => res.data.data);
     }
     return console.log(USER_AVERAGE_SESSIONS.find(user => user.userId === USER_ID))
 }
 
-export {getUserInfos, getActivity, getPerformance};
+const getAllData = ()=> {
+  return (getUserInfos(),
+  getActivity(),
+  getPerformance(),
+  getAverageSessions())
+}
+
+export {getUserInfos, getActivity, getPerformance, getAverageSessions, getAllData};

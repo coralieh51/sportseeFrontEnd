@@ -1,0 +1,35 @@
+#nutrients {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 779px;
+  min-width: 155px;
+  max-width: 316px;
+  margin: 200px 20px 0 20px;
+  .nutrient-card {
+    padding: 20px;
+    justify-content: center;
+    min-height: 124px;
+    min-width: 140px;
+    max-width: 195px;
+    width: 100%;
+    margin: 0 auto;
+    background: $element-background;
+    figure {
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        padding:10px;
+      }
+      figcaption {
+        font-size: 16px;
+        span {
+          align-self: flex-start;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

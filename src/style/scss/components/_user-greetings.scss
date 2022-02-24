@@ -1,0 +1,18 @@
+.user-greetings {
+    position: absolute;
+    padding-left: 107px;
+    margin-left: 117px;
+    margin-top: 68px;
+    h1 {
+        font-weight: 500;
+        font-size: 48px;
+        span {
+            font-weight: 400;
+            color: red;
+        }
+    }
+    aside {
+        margin-top: 41px;
+        font-size: 18px;
+    }
+}
