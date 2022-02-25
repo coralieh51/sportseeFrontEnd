@@ -13,6 +13,11 @@ import LineGraphic from "./components/graphics/LineGraphic";
 import RadarGraphic from "./components/graphics/RadarGraphic";
 import RadialGraphic from "./components/graphics/RadialGraphic";
 
+/**
+ * Fetch all data user infos from getData.js file. If at least one of data 
+ * @returns {Object} : HomePage with all user infos in graphics
+ */
+
 function App() {
 
   const [userData, setUserInfos] = useState(null);
@@ -20,32 +25,23 @@ function App() {
   const [userAverageSession, setAverageSession] = useState(null);
   const [userPerformance, setPerformance] = useState(null);
   
-  useEffect(async () => {
-    const Data = await getUserInfos();
-    const AverageSession = await getAverageSessions();
-    const Activity = await getActivity();
-    const Performance = await getPerformance();
-    setUserInfos(Data);
-    setActivity(Activity);
-    setAverageSession(AverageSession);
-    setPerformance(Performance);
+  useEffect( () => {
+    const getData = async () => {
+      const Data = await getUserInfos();
+      const AverageSession = await getAverageSessions();
+      const Activity = await getActivity();
+      const Performance = await getPerformance();
+      setUserInfos(Data);
+      setActivity(Activity);
+      setAverageSession(AverageSession);
+      setPerformance(Performance);
+    } 
+    getData()
   }, []);
-  if (userData === null) {
-    return <div>Loading</div>;
-  }
-
-  if (userActivity === null) {
-    return <div>Loading</div>;
-  }
   
-  if (userAverageSession === null) {
+  if (userData === null || userActivity === null || userAverageSession === null || userPerformance === null) {
     return <div>Loading</div>;
   }
-
-  if (userPerformance === null) {
-    return <div>Loading</div>;
-  }
-
   return (
     <>
       <Header />
@@ -59,7 +55,7 @@ function App() {
                 <LineGraphic session={userAverageSession.sessions}/>
                 <RadarGraphic performanceType={userPerformance.kind} performanceValues={userPerformance.data} />
                 <RadialGraphic score={userData.score}/>
-              </div>
+                </div>
             </section>
             <section id="nutrients">
               <Nutrient name="Calories" value={userData.keyData.calorieCount.toString()} icon={calorieIcon} unit="kCal"/>
