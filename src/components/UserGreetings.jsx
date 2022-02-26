@@ -1,3 +1,10 @@
+import propTypes from "prop-types";
+
+/**
+ * Renders user's greetings
+ * @Component
+ * @param {String} name user's firstname
+ */
 function UserGreetings({name}) {
 
   return (
@@ -11,3 +18,7 @@ function UserGreetings({name}) {
 }
 
 export default UserGreetings;
+
+UserGreetings.propTypes = {
+  name : propTypes.string
+} 

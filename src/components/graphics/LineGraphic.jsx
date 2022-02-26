@@ -1,12 +1,11 @@
-import {
-  LineChart,
-  Rectangle,
-  XAxis,
-  Line,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import propTypes from "prop-types";
+import { LineChart, Rectangle, XAxis, Line, Tooltip, ResponsiveContainer } from "recharts";
 
+/**
+ * Renders average session duration line chart by day in a week
+ * @Component
+ * @param {array} session 
+ */
 function LineGraphic({ session }) {
 
   const CustomToolTip = ({payload, active}) => {
@@ -18,6 +17,12 @@ function LineGraphic({ session }) {
       );
     } return null;
   }
+
+  /**
+   * Renders custom filling rectangle on the line chart while mouse over
+   * @Component
+   * @param {Array} props Use of points and width props to calculate posistion of rectangle edges
+   */
   const CustomCursor = (props) => {
     const {points, width} = props;
     const {x} = points[0];
@@ -56,3 +61,7 @@ function LineGraphic({ session }) {
 }
 
 export default LineGraphic;
+
+LineGraphic.propTypes = {
+  session : propTypes.array
+} 

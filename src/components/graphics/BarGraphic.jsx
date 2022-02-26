@@ -1,20 +1,23 @@
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer} from "recharts";
+import propTypes from "prop-types";
 
+/**
+ * Renders the bar chart composed with weight and calories bars by day on X axis & by burned calories on Y axis
+ * @Component
+ * @param {Array} session daily count of user's burned calories and weight
+ */
 function BarGraphic({ session }) {
 
   const renderGreyLabels = (value) => {
     return <span style={{ color: "#9B9EAC" }}>{value}</span>;
   };
 
+  /**
+   * Renders Custom tooltip on mouse over bars
+   * @param {Array} payload 
+   * @param {Boolean} active Checks tooltip display
+   * @returns {HTMLElement} Custom Tooltip
+   */
   const CustomToolTip = ({active, payload}) => {
     if (active && payload && payload.length) {
         return (
@@ -88,3 +91,8 @@ function BarGraphic({ session }) {
 }
 
 export default BarGraphic;
+
+
+BarGraphic.propTypes = {
+  session : propTypes.array
+} 

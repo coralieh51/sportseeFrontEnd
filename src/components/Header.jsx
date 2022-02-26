@@ -1,5 +1,9 @@
 import logo from "../assets/img/logo.svg";
 
+/**
+ * Renders top Header view
+ * @Component
+ */
 function Header() {
   return (
     <header>

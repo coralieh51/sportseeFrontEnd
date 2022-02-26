@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import main from "./style/scss/main.scss";
+import "./style/scss/main.scss";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+/**
+ * Returns the main app on the div with the id "root" of your index.html file in public folder
+ */
 ReactDOM.render(
   <React.StrictMode>
     <App />

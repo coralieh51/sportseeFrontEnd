@@ -3,6 +3,10 @@ import swimmingIcon from "../assets/img/swimming-icon.svg";
 import cyclingIcon from "../assets/img/cycling-icon.svg";
 import dumbbellIcon from "../assets/img/dumbbell-icon.svg";
 
+/**
+ * Renders Left Navigation view
+ * @Component
+ */
 function LeftNav() {
   return (
     <nav className="leftnav">

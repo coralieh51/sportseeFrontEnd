@@ -1,10 +1,21 @@
+import propTypes from 'prop-types';
 import { RadialBarChart, RadialBar, ResponsiveContainer, Legend, PolarAngleAxis } from 'recharts';
 
+/**
+ * Renders user progress into a radial chart
+ * @Component
+ * @param {Number} score user daily objective progress
+ */
 function RadialGraphic({ score }) {
   const data = [
     {value : score, fill : '#E60000'}
   ];
 
+ /**
+ * Renders custom radial chart legend
+ * @param {Array} payload
+ * @returns {HTMLElement} Custom legend
+ */
   const CustomLegend = ({payload}) => {
     return(
     <div className='radialchart-legend'><span>{`${payload[0].payload.value*100}%`}</span><p>de votre objectif</p></div>
@@ -25,3 +36,7 @@ function RadialGraphic({ score }) {
   );
 }
 export default RadialGraphic;
+
+RadialGraphic.propTypes = {
+  score : propTypes.number
+}; 

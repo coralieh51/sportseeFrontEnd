@@ -55,7 +55,7 @@ function App() {
                 <LineGraphic session={userAverageSession.sessions}/>
                 <RadarGraphic performanceType={userPerformance.kind} performanceValues={userPerformance.data} />
                 <RadialGraphic score={userData.score}/>
-                </div>
+              </div>
             </section>
             <section id="nutrients">
               <Nutrient name="Calories" value={userData.keyData.calorieCount.toString()} icon={calorieIcon} unit="kCal"/>

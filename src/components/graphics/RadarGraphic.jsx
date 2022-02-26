@@ -1,6 +1,12 @@
+import propTypes from 'prop-types';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip, Legend } from 'recharts';
-
+/**
+ * Renders radar chart of user's progress in each kind of skills
+ * @Component
+ * @param {Object} performanceType
+ * @param {Array} performanceValues
+ */
 function RadarGraphic({performanceType, performanceValues}) {
 
     const kindsArray = ["Cardio", "Energie", "Endurance", "Force", "Vitesse", "Intensité"]
@@ -19,3 +25,8 @@ function RadarGraphic({performanceType, performanceValues}) {
   }
 
   export default RadarGraphic;
+  
+  RadarGraphic.propTypes = {
+    performanceType : propTypes.object,
+    performanceValues : propTypes.array
+} 
