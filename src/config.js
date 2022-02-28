@@ -6,7 +6,7 @@
 
 const USER_ID = 18; // 12 or 18
 const DATA_SRC = "API"; // "API" or "MOCK"
-const PORT = 3000;
+const PORT = 3001;
 const URI = "http://localhost:" + PORT ;
 const PATH_USER = "/user/";
 const IMG_URI = "http://localhost:"+PORT+"/src/assets/img/";
